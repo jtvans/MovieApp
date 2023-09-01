@@ -1,0 +1,78 @@
+/* ------------------------------------------------ */
+.movie-poster-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.movie-poster {
+  text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+.container-c-p {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+
+.container-c-p-1 {
+  background-color: #f2f2f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-c-p-2 {
+  background-color: #dcdcdc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+}
+
+.mini-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  background-color: #fafaf5;
+  padding: 2px;
+  font-size: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------------------------ */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(253, 251, 251);
+  border-radius: 5px;
+}
+
+
+/* ------------------------------------------------ */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fffcfc;
+  margin-bottom: 20px;
+}
+
+h1:hover {
+  color: #007bff;
+  transition: color 0.3s ease;
+}

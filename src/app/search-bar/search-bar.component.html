@@ -1,0 +1,36 @@
+<br>
+
+<div class="container-c-p-1">
+  <form (submit)="searchMovies()">
+    <div class="input-group">
+      <input type="text" placeholder="Buscar películas..." [(ngModel)]="searchQuery" name="searchQuery">
+      <input type="text" placeholder="Buscar por ID..." [(ngModel)]="searchId" name="searchId">
+    </div>
+    <button type="submit"  class="btn btn-primary">Buscar</button>
+  </form>
+</div>
+
+
+<!-- Título -->
+<div *ngIf="movieApiService.movies && searchQuery.trim() !== ''">
+  <h2>Resultados por Título:</h2>
+  <div *ngFor="let movie of movieApiService.movies">
+    <br>
+    <div class="container-c-p-2">
+      <h3>{{ movie.Title }}</h3>
+      <p>Año: {{ movie.Year }}</p>
+    <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+  </div>
+  </div>
+</div>
+
+
+<!-- ID -->
+<div *ngIf="movieApiService.movieById && searchId.trim() !== ''">
+  <div class="container-c-p-2">
+    <h2>Resultado por ID:</h2>
+    <h3>{{ movieApiService.movieById.Title }}</h3>
+    <p>Año: {{ movieApiService.movieById.Year }}</p>
+  </div>
+  <img [src]="movieApiService.movieById.Poster" alt="{{ movieApiService.movieById.Title }} Poster">
+</div>

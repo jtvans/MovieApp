@@ -1,0 +1,25 @@
+<br>
+
+<div class="search-bar">
+    <h1>Bienvenido a MovieSearchApp</h1>
+    <div class="mini-container">
+        <a routerLink="/search">BUSCAR</a>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<div class="container-c-p">
+    <div class="movie-poster-container">
+        <div class="movie-poster" *ngFor="let movie of movieData">
+            <h2 style="color: white;">{{ movie.Title }}</h2>
+            <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
