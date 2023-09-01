@@ -4,7 +4,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Buscar
+  { path: '', component: HomeComponent },
   { path: 'search', component: SearchBarComponent },
 ];
 

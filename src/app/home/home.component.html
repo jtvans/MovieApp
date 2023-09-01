@@ -12,9 +12,10 @@
 
 
 <div class="container-c-p">
+    <p style="font-size: 30px;"><strong>Popular</strong></p>
     <div class="movie-poster-container">
         <div class="movie-poster" *ngFor="let movie of movieData">
-            <h2 style="color: white;">{{ movie.Title }}</h2>
+            <h2 style="color: rgb(0, 0, 0);">{{ movie.Title }}</h2>
             <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
         </div>
     </div>

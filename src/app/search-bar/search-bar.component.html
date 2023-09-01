@@ -1,26 +1,32 @@
 <br>
 
 <div class="container-c-p-1">
-  <form (submit)="searchMovies()">
-    <div class="input-group">
-      <input type="text" placeholder="Buscar películas..." [(ngModel)]="searchQuery" name="searchQuery">
-      <input type="text" placeholder="Buscar por ID..." [(ngModel)]="searchId" name="searchId">
+  <form (submit)="searchMovies()" class="form-inline">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Buscar por Titulo..." [(ngModel)]="searchQuery"
+        name="searchQuery">
     </div>
-    <button type="submit"  class="btn btn-primary">Buscar</button>
+    <br>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Buscar por ID..." [(ngModel)]="searchId" name="searchId">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary mx-auto">BUSCAR</button>
   </form>
 </div>
+
+<br>
 
 
 <!-- Título -->
 <div *ngIf="movieApiService.movies && searchQuery.trim() !== ''">
-  <h2>Resultados por Título:</h2>
   <div *ngFor="let movie of movieApiService.movies">
-    <br>
     <div class="container-c-p-2">
-      <h3>{{ movie.Title }}</h3>
-      <p>Año: {{ movie.Year }}</p>
-    <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
-  </div>
+      <h3 style="color: white;">{{ movie.Title }}</h3>
+      <p style="color: white;">Tipo: {{ movie.Type }}</p>
+      <p style="color: white;">Año: {{ movie.Year }}</p>
+      <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+    </div>
   </div>
 </div>
 
@@ -28,9 +34,11 @@
 <!-- ID -->
 <div *ngIf="movieApiService.movieById && searchId.trim() !== ''">
   <div class="container-c-p-2">
-    <h2>Resultado por ID:</h2>
-    <h3>{{ movieApiService.movieById.Title }}</h3>
-    <p>Año: {{ movieApiService.movieById.Year }}</p>
+    <h2 style="color: white;">Resultado por ID:</h2>
+    <h3 style="color: white;">{{ movieApiService.movieById.Title }}</h3>
+    <p style="color: white;">Tipo: {{ movieApiService.movieById.Type }}</p>
+    <p style="color: white;">Año: {{ movieApiService.movieById.Year }}</p>
+    <p style="color: white;">Generos: {{ movieApiService.movieById.Genre }}</p>
+    <img [src]="movieApiService.movieById.Poster" alt="{{ movieApiService.movieById.Title }} Poster">
   </div>
-  <img [src]="movieApiService.movieById.Poster" alt="{{ movieApiService.movieById.Title }} Poster">
 </div>

@@ -7,11 +7,7 @@ import { MovieApiService } from '../movie-api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  movies = [
-    'Avatar',
-    'One Piece',
-  ];
-
+  movies = ['Avatar', 'One Piece','Avengers: Endgame', 'Guardians of the Galaxy Vol. 3'];
   movieData: any[] = [];
 
   constructor(private movieApiService: MovieApiService) {}
@@ -25,3 +21,4 @@ export class HomeComponent implements OnInit {
     });
   }
 }
+
